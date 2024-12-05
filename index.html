@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <style>
+        img {
+            object-fit: cover;
+            /* height: 100%; */
+        }
+
+        .max-width {
+            max-width: 1260px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .row, nav {
+            width: 100%;
+        }
+
+        .carousel-item img {
+            height: 100vh;
+        }
+
+        @media screen and (max-width: 1300px) {
+            .max-width {
+                max-width: 90vw;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            #search {
+                display: none !important;
+            }
+        }
+
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+            grid-auto-rows: 14vw; /* Each row is 100px by default */
+            gap: 8px; /* Gap between items */
+        }
+
+        .grid-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Grid item spans */
+        .item1 {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        .item2 {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .item3 {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .item4 {
+            grid-column: span 4;
+            grid-row: span 1;
+        }
+
+        .item5 {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .item6 {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .item7 {
+            grid-column: span 4;
+            grid-row: span 1;
+        }
+
+        .item8 {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        .item9 {
+            grid-column: span 8;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-width">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #fff !important" id="nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Complex UI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">Section 1</a>
+                        <a class="nav-link" href="#">Section 2</a>
+                        <a class="nav-link" href="#">Section 3</a>
+                    </div>
+                </div>
+                <form class="d-flex" role="search" id="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?cs=srgb&dl=pexels-pixabay-302769.jpg&fm=jpg"
+                    class="d-block w-100" alt="Building" />
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1493514789931-586cb221d7a7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100" alt="Building" />
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1516281717304-181e285c6e58?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100" alt="Building" />
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?q=80&w=1784&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100" alt="Building" />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="max-width pt-4 pb-4 text-center">
+        <div class="row gap-2 center" style="justify-content: center;">
+            <div class="col-12 col-sm p-0">
+                <img src="https://images.unsplash.com/photo-1608085575984-d61d8335340e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top" alt="Image" />
+                Short Description
+            </div>
+            <div class="col-12 col-sm p-0">
+                <img src="https://images.unsplash.com/photo-1608085575984-d61d8335340e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top" alt="Image" />
+                Short Description
+            </div>
+            <div class="col-12 col-sm p-0">
+                <img src="https://images.unsplash.com/photo-1608085575984-d61d8335340e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top" alt="Image" />
+                Short Description
+            </div>
+        </div>
+    </div>
+    <div class="max-width">
+        <div class="grid-container">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item1" alt="Image 1">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item2" alt="Image 2">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item3" alt="Image 3">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item4" alt="Image 4">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item5" alt="Image 5">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item6" alt="Image 6">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item7" alt="Image 7">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item8" alt="Image 8">
+            <img src="https://via.placeholder.com/300x200" class="grid-item item9" alt="Image 9">
+        </div>
+    </div>
+    <div class="max-width pt-4 pb-4">
+        <div class="row gap-2">
+            <div class="card col-12 col-sm p-0">
+                <img src="https://images.unsplash.com/photo-1608085575984-d61d8335340e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top" alt="Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Card Description.</p>
+                    <a href="#" class="btn btn-primary">Call to Action</a>
+                </div>
+            </div>
+            <div class="card col-12 col-sm p-0">
+                <img src="https://images.unsplash.com/photo-1608085575984-d61d8335340e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top" alt="Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Card Description.</p>
+                    <a href="#" class="btn btn-primary">Call to Action</a>
+                </div>
+            </div>
+            <div class="card col-12 col-sm p-0">
+                <img src="https://images.unsplash.com/photo-1608085575984-d61d8335340e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top" alt="Image" />
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Card Description.</p>
+                    <a href="#" class="btn btn-primary">Call to Action</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-4 text-black" style="background-color: #cdcdcd !important">
+        <div class="max-width">
+            <div class="row">
+                <!-- Useful Links Column -->
+                <div class="col-md-4">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <!-- More Links Column -->
+                <div class="col-md-4">
+                    <h5>More Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Us Column -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            Email:
+                            <a href="mailto:example@example.com"
+                                class="text-decoration-none text-black">example@example.com</a>
+                        </li>
+                        <li>
+                            Phone:
+                            <a href="tel:+911234567890" class="text-decoration-none text-black">+91 1234567890</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">© 2023 Complex UI. All Rights Reserved.</div>
+                <div class="col-md-6 d-flex flex-row-reverse">
+                    <a href="#nav">
+                        <button type="button" class="btn btn-primary">Back to Top</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
